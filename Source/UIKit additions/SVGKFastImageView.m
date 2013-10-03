@@ -124,6 +124,8 @@
         ;
     else
         [_image addObserver:self forKeyPath:@"size" options:NSKeyValueObservingOptionNew context:internalContextPointerBecauseApplesDemandsIt];
+
+    [self setNeedsDisplay];
 }
 
 -(void) addInternalRedrawOnResizeObservers
